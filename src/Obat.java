@@ -138,7 +138,7 @@ public class Obat extends javax.swing.JFrame {
         });
         jPanel1.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 250, 300, 35));
 
-        jButton1.setBackground(new java.awt.Color(255, 255, 204));
+        jButton1.setBackground(new java.awt.Color(228, 241, 255));
         jButton1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jButton1.setText("Back To Transaksi");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -148,7 +148,7 @@ public class Obat extends javax.swing.JFrame {
         });
         jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 320, 150, 50));
 
-        jButton2.setBackground(new java.awt.Color(255, 255, 204));
+        jButton2.setBackground(new java.awt.Color(228, 241, 254));
         jButton2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jButton2.setText("Save");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -158,7 +158,7 @@ public class Obat extends javax.swing.JFrame {
         });
         jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 320, 105, 50));
 
-        jButton3.setBackground(new java.awt.Color(255, 255, 204));
+        jButton3.setBackground(new java.awt.Color(228, 241, 254));
         jButton3.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jButton3.setText("Update");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -178,7 +178,7 @@ public class Obat extends javax.swing.JFrame {
         });
         jPanel1.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 320, 112, 50));
 
-        jButton5.setBackground(new java.awt.Color(255, 255, 204));
+        jButton5.setBackground(new java.awt.Color(228, 241, 254));
         jButton5.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jButton5.setText("Cancel");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
@@ -188,7 +188,7 @@ public class Obat extends javax.swing.JFrame {
         });
         jPanel1.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 400, 110, 50));
 
-        jButton6.setBackground(new java.awt.Color(255, 255, 204));
+        jButton6.setBackground(new java.awt.Color(228, 241, 254));
         jButton6.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         jButton6.setText("Exit");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
@@ -348,8 +348,8 @@ public class Obat extends javax.swing.JFrame {
         try{
             String sql="UPDATE obat SET kode_obat='"+jTextField1.getText()+"',"
                 +"nama_obat='"+jTextField2.getText()+"',"
-                +"jumlah_obat='"+jTextField3.getText()+"',"
-                +"harga_obat='"+jTextField4.getText()+"' WHERE kode_obat='"+jTextField1.getText()+"'";
+                +"stok_obat='"+jTextField3.getText()+"',"
+                +"harga_satuan='"+jTextField4.getText()+"' WHERE kode_obat='"+jTextField1.getText()+"'";
         
             java.sql.Connection conn = (Connection)konfig.configDB();
             java.sql.PreparedStatement pstm = conn.prepareStatement(sql);
