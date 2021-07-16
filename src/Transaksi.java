@@ -525,8 +525,8 @@ public class Transaksi extends javax.swing.JFrame {
             String update="UPDATE obat SET stok_obat=stok_obat - '"
                     +jumlah.getText()+"' WHERE kode_obat='"+kodeobat.getText()+"'";
                     
-           java.sql.PreparedStatement a =conn.prepareStatement(update);
-            a.execute();
+           java.sql.PreparedStatement ax =conn.prepareStatement(update);
+            ax.execute();
             TampilData();
             KosongForm();
         }catch(HeadlessException | SQLException e){
