@@ -63,7 +63,7 @@ public class LoginAdmin extends javax.swing.JFrame {
         passw.setForeground(new java.awt.Color(255, 255, 255));
         passw.setText("Passsword : ");
 
-        exit.setBackground(new java.awt.Color(252, 148, 120));
+        exit.setBackground(new java.awt.Color(242, 121, 53));
         exit.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         exit.setForeground(new java.awt.Color(255, 255, 255));
         exit.setText("Exit");
@@ -73,7 +73,7 @@ public class LoginAdmin extends javax.swing.JFrame {
             }
         });
 
-        btnlogin.setBackground(new java.awt.Color(174, 168, 211));
+        btnlogin.setBackground(new java.awt.Color(103, 65, 114));
         btnlogin.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         btnlogin.setForeground(new java.awt.Color(255, 255, 255));
         btnlogin.setText("Login");

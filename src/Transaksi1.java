@@ -34,7 +34,6 @@ public class Transaksi1 extends javax.swing.JFrame {
         model.addColumn("ID Admin");
         model.addColumn("Nama Obat");
         model.addColumn("Tanggal");
-        model.addColumn("Stok Obat");
         model.addColumn("Jumlah Obat");
         model.addColumn("Harga Satuan");
         model.addColumn("Total Harga");
@@ -55,8 +54,7 @@ public class Transaksi1 extends javax.swing.JFrame {
                    res.getDate(4),
                    res.getString(5),
                    res.getString(6),
-                   res.getString(7),
-                   res.getString(8)});
+                   res.getString(7)});
                }
            tabeltransaksi.setModel(model);
         }catch(SQLException e){
