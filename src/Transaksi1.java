@@ -1,9 +1,14 @@
 
+import java.io.InputStream;
 import java.sql.Connection;
 import java.sql.SQLException;
+import javax.swing.JOptionPane;
 import javax.swing.RowFilter;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableRowSorter;
+import net.sf.jasperreports.engine.JasperFillManager;
+import net.sf.jasperreports.engine.JasperPrint;
+import net.sf.jasperreports.view.JasperViewer;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -257,7 +262,14 @@ public class Transaksi1 extends javax.swing.JFrame {
     }//GEN-LAST:event_caritransaksiKeyReleased
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
+        try{
+            InputStream is= Transaksi1.class.getResourceAsStream("/Laporan/Transaksi1.jasper");
+            JasperPrint jsPrint = JasperFillManager.fillReport(is, null, konfig.configDB());
+            JasperViewer.viewReport(jsPrint, false);
+        }catch(Exception e){
+            JOptionPane.showMessageDialog(null, "gagal laporan karena : "
+            +e.getMessage(),"cetak lapooran",JOptionPane.ERROR_MESSAGE);
+        }// TODO add your handling code here:
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
